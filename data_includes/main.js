@@ -81,33 +81,46 @@ Template( variable =>
     newAudio("tone", variable.AudioFile)
         .play()
     ,
-    newImage("gesture_key",variable.ImageFile2)
-        .size(200,200)
+    newImage("1","asd.png")
+         .size(100,100)
     ,
-    newCanvas("key",200,200)
-        .add(   0 , 0 , getImage("gesture_key") )
+    newImage("2","zse.png")
+         .size(100,100)
+    ,
+    newImage("3","qse.png")
+         .size(100,100)
+    ,
+    newCanvas("key",300,100)
+        .add(   0 , 0 , getImage("1") )
+        .add(100, 0, getImage("2"))
+        .add(200, 0, getImage("3"))
         .print()
     ,
-    newKey('first',variable.key1)
+    newSelector()
+        .add(getImage("1"))
         .log()
         .wait()
     ,
-    newKey('second',variable.key2)
+    newSelector()
+        .add(getImage("2"))
         .log()
         .wait()
     ,
-    newKey('third',variable.key3)
+    newSelector()
+        .add(getImage("1"))
         .log()
         .wait()
     ,
+
     getCanvas("key")
         .remove()
     ,
     newText("continue","Press space bar to continue;")
         .print()
     ,
-    newKey('space',' ')
-         .wait()
+newButton("click", "Click me!")
+    .print()
+    .wait()
   )
   .log( "ID"     , getVar("ID")    )
   .log( "Item"   , variable.Item   )
