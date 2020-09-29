@@ -76,19 +76,19 @@ Template( variable =>
     newAudio("tone", variable.AudioFile)
         .play()
     ,
-    newImage("gesture_key",variable.ImageFile2)
+    newImage("gesture_key",variable.ImageFile)
         .size(200,200)
     ,
-    newCanvas("key",200,200)
+    newCanvas("alien",200,200)
         .add(   0 , 0 , getImage("gesture_key") )
         .print()
     ,
-    newKey('first',variable.key1)
+    newKey('response',variable.key)
         .log()
         .wait()
     ,
 
-    getCanvas("key")
+    getCanvas("alien")
         .remove()
     ,
     newText("continue","Press space bar to continue;")
