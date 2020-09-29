@@ -63,6 +63,9 @@ Template( variable =>
     newText("fixation",'+')
         .print()
     ,
+    newAudio("tone", variable.AudioFile)
+        .play("loop")
+    ,
     newTimer("wait", 800)
         .start()
         .wait()
@@ -77,9 +80,9 @@ Template( variable =>
         .wait()
     ,
 
-    newAudio("tone", variable.AudioFile)
-        .play()
-    ,
+    //newAudio("tone", variable.AudioFile)
+        //.play()
+    //,
     newImage("gesture_key",variable.ImageFile)
         .size(200,200)
     ,
@@ -90,6 +93,9 @@ Template( variable =>
     newKey('response',"wasd")
         .log()
         .wait()
+    ,
+    getAudio("tone")
+        .stop()
     ,
     getCanvas("alien")
         .remove()
