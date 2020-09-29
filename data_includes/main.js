@@ -83,14 +83,19 @@ Template( variable =>
         .add(   0 , 0 , getImage("gesture_key") )
         .print()
     ,
-    newKey('response',variable.key)
+    newKey('response',"abcd")
         .log()
         .wait()
     ,
-
     getCanvas("alien")
         .remove()
     ,
+    getKey("response")
+       .test.pressed(variable.key)
+       .success( newText("success", "You're right!").print() )
+       .failure( newText("failure", "You're wrong, 0.999... and 1 do refer to the same number").print() )
+    ,
+
     newText("continue","Press space bar to continue;")
         .print()
     ,
