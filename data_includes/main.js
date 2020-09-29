@@ -31,7 +31,7 @@ newTrial( "welcome" ,
     ,
     newImage("4","qsx.png")
          .size(100,100)
-    , 
+    ,
     newCanvas(200,200)
          .add(   0 , 0 , getImage("1") )
          .add(   100 , 0 , getImage("2") )
@@ -51,7 +51,7 @@ newTrial( "welcome" ,
         .set( getTextInput("inputID") )
 )
 .log( "ID" , getVar("ID") )
-Template( variable => 
+Template( variable =>
     newTrial( "experiment" ,
     newAudio('bgm',"drumloop_65.wav")
         .play()
@@ -81,51 +81,39 @@ Template( variable =>
     newAudio("tone", variable.AudioFile)
         .play()
     ,
-    newImage("1","asd.png")
-         .size(100,100)
+    newImage("gesture_key",variable.ImageFile2)
+        .size(200,200)
     ,
-    newImage("2","zse.png")
-         .size(100,100)
-    ,
-    newImage("3","qse.png")
-         .size(100,100)
-    ,
-    newCanvas("key",300,100)
-        .add(   0 , 0 , getImage("1") )
-        .add(100, 0, getImage("2"))
-        .add(200, 0, getImage("3"))
+    newCanvas("key",200,200)
+        .add(   0 , 0 , getImage("gesture_key") )
         .print()
     ,
-    newSelector()
-        .add(getImage("1"))
+    newKey('first',variable.key1)
         .log()
         .wait()
     ,
-    newSelector()
-        .add(getImage("2"))
+    newKey('second',variable.key2)
         .log()
         .wait()
     ,
-    newSelector()
-        .add(getImage("1"))
+    newKey('third',variable.key3)
         .log()
         .wait()
     ,
-
     getCanvas("key")
         .remove()
     ,
     newText("continue","Press space bar to continue;")
         .print()
     ,
-newButton("click", "Click me!")
-    .print()
-    .wait()
+    newKey('space',' ')
+         .wait()
   )
   .log( "ID"     , getVar("ID")    )
   .log( "Item"   , variable.Item   )
   .log( "Group"  , variable.Group  )
 )
+
 SendResults( "send" )
 newTrial( "final" ,
     newText("<p>Thank you for your participation!</p>")
