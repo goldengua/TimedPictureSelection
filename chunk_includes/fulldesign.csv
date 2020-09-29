@@ -1,9 +1,9 @@
 AudioFile,ImageFile,key,Item,Group
-m2_syllable_b3_ai1.wav, alien1.png,a,ai1,1
-m2_syllable_b3_ai2.wav, alien2.png,b,ai2,1
-m2_syllable_b3_ai3.wav, alien3.png,c,ai3,1
+m2_syllable_b3_ai1.wav, alien1.png,w,ai1,1
+m2_syllable_b3_ai2.wav, alien2.png,a,ai2,1
+m2_syllable_b3_ai3.wav, alien3.png,s,ai3,1
 m2_syllable_b3_ai4.wav, alien4.png,d,ai4,1
-m2_syllable_b3_ba1.wav, alien1.png,a,ba1,1
-m2_syllable_b3_ba2.wav, alien2.png,b,ba2,1
-m2_syllable_b3_ba3.wav, alien3.png,c,ba3,1
+m2_syllable_b3_ba1.wav, alien1.png,w,ba1,1
+m2_syllable_b3_ba2.wav, alien2.png,a,ba2,1
+m2_syllable_b3_ba3.wav, alien3.png,s,ba3,1
 m2_syllable_b3_ba4.wav, alien4.png,d,ba4,1
