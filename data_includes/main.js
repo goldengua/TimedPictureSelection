@@ -73,15 +73,17 @@ Template( variable =>
         .remove()
     ,
 
-
+    newAudio("tone", variable.AudioFile)
+        .play("loop")
+    ,
     newTimer("wait", 800)
         .start()
         .wait()
     ,
 
-    newAudio("tone", variable.AudioFile)
-        .play()
-    ,
+    //newAudio("tone", variable.AudioFile)
+        //.play()
+    //,
     newImage("gesture_key",variable.ImageFile)
         .size(200,200)
     ,
