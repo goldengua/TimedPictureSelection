@@ -83,7 +83,7 @@ Template( variable =>
         .add(   0 , 0 , getImage("gesture_key") )
         .print()
     ,
-    newKey('response',"abcd")
+    newKey('response',"wasd")
         .log()
         .wait()
     ,
