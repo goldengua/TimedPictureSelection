@@ -12,11 +12,13 @@ newTrial( "welcome" ,
     ,
     newText("<p>Welcome!</p>")
     ,
-    newText("<p>In this experiment, you will first see four different kinds of arrows. </p>")
+    newText("<p>In this experiment, you will first see four different kinds of aliens. </p>")
     ,
-    newText("<p>Quickly swipe through corresponding keys as suggested by the pictures with directional arrows.</p>")
+    newText("<p>Press [w], [a],[s] and [d] to catch these aliens as quickly as possible.</p>")
     ,
-    newText("<p>For the first picture, you should swipe keys<strong>A, S, D</strong>. Observe the four pictures and get yourself familiar with swiping on keyboard.</p>")
+    newText("<p>For the green alien, press [w]; for blue, press [a]; for pink, press [s]; for yellow, press [d]. </p>")
+    ,
+    newText("<p>Please get yourself familiar with the action required for catching aliens. </p>")
     ,
     newText("<p>Please enter your ID and then click the button below to start the experiment.</p>")
     ,
