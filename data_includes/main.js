@@ -92,8 +92,8 @@ Template( variable =>
     ,
     getKey("response")
        .test.pressed(variable.key)
-       .success( newText("success", "You're right!").print() )
-       .failure( newText("failure", "You're wrong, 0.999... and 1 do refer to the same number").print() )
+       .success( newText("success", "Congratulations! You caught the right alien.").print() )
+       .failure( newText("failure", "You are wrong. Better luck next time.").print() )
     ,
 
     newText("continue","Press space bar to continue;")
