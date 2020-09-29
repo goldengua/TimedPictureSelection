@@ -20,16 +20,16 @@ newTrial( "welcome" ,
     ,
     newText("<p>Please enter your ID and then click the button below to start the experiment.</p>")
     ,
-    newImage("1","asd.png")
+    newImage("1","alien1.png")
          .size(100,100)
     ,
-    newImage("2","zse.png")
+    newImage("2","alien2.png")
          .size(100,100)
     ,
-    newImage("3","qse.png")
+    newImage("3","alien3.png")
          .size(100,100)
     ,
-    newImage("4","qsx.png")
+    newImage("4","alien4.png")
          .size(100,100)
     ,
     newCanvas(200,200)
@@ -67,17 +67,12 @@ Template( variable =>
         .remove()
     ,
 
-    newImage("gesture", variable.ImageFile1)
-        .size(200,200)
-        .print()
-    ,
+
     newTimer("wait", 800)
         .start()
         .wait()
     ,
-    getImage('gesture')
-        .remove()
-    ,
+
     newAudio("tone", variable.AudioFile)
         .play()
     ,
@@ -92,14 +87,7 @@ Template( variable =>
         .log()
         .wait()
     ,
-    newKey('second',variable.key2)
-        .log()
-        .wait()
-    ,
-    newKey('third',variable.key3)
-        .log()
-        .wait()
-    ,
+
     getCanvas("key")
         .remove()
     ,
