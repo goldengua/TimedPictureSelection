@@ -101,7 +101,7 @@ Template( variable =>
    getKey("response")
        .test.pressed(variable.key)
        .success( newAudio("success", "success.wav").play() )
-       .failure( newAudio("failure", "failure.wav").play(), newText(variable.key).print() )
+       .failure( newAudio("failure", "failure.wav").play(), newText(variable.key).bold().center().color("red").print() )
     ,
    newTimer("wait", 800)
         .start()
