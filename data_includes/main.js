@@ -85,7 +85,7 @@ Template( variable =>
         //.play()
     //,
     newImage("gesture_key",variable.ImageFile)
-        .size(400,400)
+        .size(200,200)
     ,
     newCanvas("alien",200,200)
         .add(   0 , 0 , getImage("gesture_key") )
