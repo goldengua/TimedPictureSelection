@@ -98,20 +98,26 @@ Template( variable =>
     getAudio("tone")
         .stop()
     ,
+   getKey("response")
+       .test.pressed(variable.key)
+       .success( newAudio("success", "success.wav").play() )
+       .failure( newAudio("failure", "failure.wav").play(), newText(variable.key).print() )
+    ,
+   newTimer("wait", 800)
+        .start()
+        .wait()
+    ,         
     getCanvas("alien")
         .remove()
-    ,
-    getKey("response")
-       .test.pressed(variable.key)
-       .success( newText("success", "Congratulations! You caught the right alien.").print() )
-       .failure( newText("failure", "You are wrong. Better luck next time.").print() )
-    ,
+    
 
-    newText("continue","Press space bar to continue;")
-        .print()
-    ,
-    newKey('space',' ')
-         .wait()
+
+    //newText("continue","Press space bar to continue;")
+        //.print()
+    //,
+    //newKey('space',' ')
+         //.wait()
+
   )
   .log( "ID"     , getVar("ID")    )
   .log( "Item"   , variable.Item   )
