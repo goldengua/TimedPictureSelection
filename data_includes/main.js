@@ -86,7 +86,7 @@ Template( variable =>
     ,
     getCanvas("alien")
         .remove()
-
+    ,
     //second position
     newAudio("tone", variable.AudioFile)
         .play()
@@ -101,6 +101,8 @@ Template( variable =>
     ,  
     getCanvas("alien")
         .remove()
+    ,
+             
     //third canvas 
     newAudio("tone", variable.AudioFile)
         .play()
@@ -115,7 +117,7 @@ Template( variable =>
     ,  
     getCanvas("alien")
         .remove()
-
+    ,
 //get response
     newKey('response',"wasd")
         .log()
@@ -140,7 +142,7 @@ Template( variable =>
     getCanvas("alien")
         .remove()
     
-
+    
 
     //newText("continue","Press space bar to continue;")
         //.print()
