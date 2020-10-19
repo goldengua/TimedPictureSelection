@@ -12,35 +12,23 @@ newTrial( "welcome" ,
     ,
     newText("<p>Welcome!</p>")
     ,
-    newText("<p>In this experiment, you will first see four different kinds of aliens. </p>")
+    newText("<p>In this experiment, you will see aliens suddenly appear on the screen. </p>")
     ,
-    newText("<p>Press <strong> [w] [a] [s] [d] </strong>to catch these aliens as quickly as possible.</p>")
+    newText("<p>Press mouse click to catch these aliens as quickly as possible.</p>")
     ,
-    newText("<p>For the <strong>green</strong> alien, press <strong>[w]</strong>; for <strong>blue</strong>, press <strong>[a]</strong>; </p>")
+    newText("<p>There are some regularities in the alien's moving trajectory. </p>")
     ,
-    newText("<p>for <strong>pink</strong>, press <strong>[s]</strong>; for <strong>yellow</strong>, press <strong>[d]</strong>. </p>")
+    newText("<p>Discovering the trajectory might help you with a quick action. </p>")
     ,
     newText("<p>Please get yourself familiar with the action required for catching aliens. </p>")
     ,
     newText("<p>Please enter your ID and then click the button below to start the experiment.</p>")
     ,
     newImage("1","alien1.png")
-         .size(100,100)
-    ,
-    newImage("2","alien2.png")
-         .size(100,100)
-    ,
-    newImage("3","alien3.png")
-         .size(100,100)
-    ,
-    newImage("4","alien4.png")
-         .size(100,100)
+         .size(200,200)
     ,
     newCanvas("intro",200,200)
          .add(   0 , 0 , getImage("1") )
-         .add(   100 , 0 , getImage("2") )
-         .add(   0 , 100 , getImage("3") )
-         .add(   100 , 100 , getImage("4") )
          .print()
     ,
     newTextInput("inputID")
