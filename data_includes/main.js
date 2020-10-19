@@ -75,18 +75,13 @@ Template( variable =>
     newImage("gesture_key","alien1.png")
         .size(100,100)
     ,
-                newCanvas("alien",300,300)
-        .add(   variable.P1x , variable.P1y , getImage("gesture_key") )
-        .add(   variable.P2x , variable.P2y , getImage("gesture_key") )
-        .add(   variable.P3x , variable.P3y , getImage("gesture_key") )
-        .print()
-    ,
+
     //first position
     newAudio("tone", variable.AudioFile)
         .play()
     ,
     newCanvas("alien",300,300)
-        .add(   variable.P1x , variable.P1y , getImage("gesture_key") )
+        .add(   variable.P1x , variable.P1y , newImage("alien1.png").size(100,100) )
         .print()
     ,
     newTimer("wait", 500)
@@ -101,7 +96,7 @@ Template( variable =>
         .play()
     ,
     newCanvas("alien",300,300)
-        .add(   variable.P2x , variable.P2y , getImage("gesture_key") )
+        .add(   variable.P2x , variable.P2y , newImage("alien1.png").size(100,100) )
         .print()
     ,
     newTimer("wait", 500)
@@ -117,7 +112,7 @@ Template( variable =>
         .play()
     ,
     newCanvas("alien",300,300)
-        .add(   variable.P3x , variable.P3y , getImage("gesture_key") )
+        .add(   variable.P3x , variable.P3y , newImage("alien1.png").size(100,100) )
         .print()
     ,
     newTimer("wait", 500)
