@@ -36,7 +36,7 @@ newTrial( "welcome" ,
     newImage("4","alien4.png")
          .size(100,100)
     ,
-    newCanvas(200,200)
+    newCanvas("intro",200,200)
          .add(   0 , 0 , getImage("1") )
          .add(   100 , 0 , getImage("2") )
          .add(   0 , 100 , getImage("3") )
@@ -53,6 +53,9 @@ newTrial( "welcome" ,
     newVar("ID")
         .global()
         .set( getTextInput("inputID") )
+   ,
+   getCanvas("intro")
+         .remove()
 )
 .log( "ID" , getVar("ID") )
 Template( variable =>
