@@ -72,7 +72,7 @@ Template( variable =>
         .play()
     ,
     newCanvas("p1",300,300)
-        .add(   variable.P1x , variable.P1y , newImage("p1_alien",variable.Image).size(100,100) )
+        .add(   variable.P1x , variable.P1y , newImage("p1_alien",variable.ImageFile).size(100,100) )
         .print()
     ,
     newSelector()
@@ -92,7 +92,7 @@ Template( variable =>
         .play()
     ,
     newCanvas("p2",300,300)
-        .add(   variable.P2x , variable.P2y , newImage("p2_alien","alien1.png").size(100,100) )
+        .add(   variable.P2x , variable.P2y , newImage("p2_alien",variable.ImageFile).size(100,100) )
         .print()
     ,
     newSelector()
@@ -113,7 +113,7 @@ Template( variable =>
         .play()
     ,
     newCanvas("p3",300,300)
-        .add(   variable.P3x , variable.P3y , newImage("p3_alien","alien1.png").size(100,100) )
+        .add(   variable.P3x , variable.P3y , newImage("p3_alien",variable.ImageFile).size(100,100) )
         .print()
     ,
     newSelector()
@@ -129,9 +129,9 @@ Template( variable =>
         .remove()
     ,
     newCanvas("alien",300,300)
-        .add(   variable.P1x , variable.P1y , newImage("alien1.png").size(100,100) )
-        .add(   variable.P2x , variable.P2y , newImage("alien1.png").size(100,100) )
-        .add(   variable.P3x , variable.P3y , newImage("alien1.png").size(100,100))
+        .add(   variable.P1x , variable.P1y , newImage(variable.ImageFile).size(100,100) )
+        .add(   variable.P2x , variable.P2y , newImage(variable.ImageFile).size(100,100) )
+        .add(   variable.P3x , variable.P3y , newImage(variable.ImageFile).size(100,100))
         .print()
     ,
    newAudio("success", "success.wav")
