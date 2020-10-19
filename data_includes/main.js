@@ -12,7 +12,7 @@ newTrial( "welcome" ,
     ,
     newText("<p>Welcome!</p>")
     ,
-    newText("<p>In this experiment, you will see aliens suddenly appear on the screen. </p>")
+    newText("<p>In this experiment, you will see four kinds of aliens suddenly appear on the screen. </p>")
     ,
     newText("<p>Press mouse click to catch these aliens as quickly as possible.</p>")
     ,
@@ -25,10 +25,22 @@ newTrial( "welcome" ,
     newText("<p>Please enter your ID and then click the button below to start the experiment.</p>")
     ,
     newImage("1","alien1.png")
-         .size(200,200)
+         .size(100,100)
+    ,
+     newImage("2","alien2.png")
+         .size(100,100)
+    ,
+     newImage("3","alien3.png")
+         .size(100,100)
+    ,
+     newImage("1","alien4.png")
+         .size(100,100)
     ,
     newCanvas("intro",200,200)
          .add(   0 , 0 , getImage("1") )
+         .add(   100 , 0 , getImage("2") )
+         .add(   0 , 100 , getImage("3") )
+         .add(   100 , 100 , getImage("4") )
          .print()
     ,
     newTextInput("inputID")
@@ -78,9 +90,9 @@ Template( variable =>
     newSelector()
        .add( getImage("p1_alien")  )
        .log()
-       .wait()
+       //.wait()
    ,
-    newTimer("wait", 300)
+    newTimer("wait", 1200)
         .start()
         .wait()
     ,
@@ -98,9 +110,9 @@ Template( variable =>
     newSelector()
        .add( getImage("p2_alien")  )
        .log()
-       .wait()
+       //.wait()
    ,
-    newTimer("wait", 300)
+    newTimer("wait", 1200)
         .start()
         .wait()
     ,  
@@ -119,9 +131,9 @@ Template( variable =>
     newSelector()
        .add( getImage("p3_alien")  )
        .log()
-       .wait()
+       //.wait()
    ,
-    newTimer("wait", 500)
+    newTimer("wait", 1200)
         .start()
         .wait()
     ,  
@@ -138,7 +150,7 @@ Template( variable =>
         .play()
    ,
 
-   newTimer("wait", 800)
+   newTimer("wait", 500)
         .start()
         .wait()
     ,         
