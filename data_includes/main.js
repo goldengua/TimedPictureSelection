@@ -84,10 +84,15 @@ Template( variable =>
         .play()
     ,
     newCanvas("p1",300,300)
-        .add(   variable.P1x , variable.P1y , newImage("alien1.png").size(100,100) )
+        .add(   variable.P1x , variable.P1y , newImage("p1_alien","alien1.png").size(100,100) )
         .print()
     ,
-    newTimer("wait", 500)
+    newSelector()
+       .add( getImage("p1_alien")  )
+       .log()
+       .wait()
+   ,
+    newTimer("wait", 300)
         .start()
         .wait()
     ,
@@ -99,10 +104,15 @@ Template( variable =>
         .play()
     ,
     newCanvas("p2",300,300)
-        .add(   variable.P2x , variable.P2y , newImage("alien1.png").size(100,100) )
+        .add(   variable.P2x , variable.P2y , newImage("p2_alien","alien1.png").size(100,100) )
         .print()
     ,
-    newTimer("wait", 500)
+    newSelector()
+       .add( getImage("p2_alien")  )
+       .log()
+       .wait()
+   ,
+    newTimer("wait", 300)
         .start()
         .wait()
     ,  
@@ -115,9 +125,14 @@ Template( variable =>
         .play()
     ,
     newCanvas("p3",300,300)
-        .add(   variable.P3x , variable.P3y , newImage("alien1.png").size(100,100) )
+        .add(   variable.P3x , variable.P3y , newImage("p3_alien","alien1.png").size(100,100) )
         .print()
     ,
+    newSelector()
+       .add( getImage("p3_alien")  )
+       .log()
+       .wait()
+   ,
     newTimer("wait", 500)
         .start()
         .wait()
@@ -131,17 +146,9 @@ Template( variable =>
         .add(   variable.P3x , variable.P3y , newImage("alien1.png").size(100,100))
         .print()
     ,
-//get response
-    newKey('response',"wasd")
-        .log()
-        .wait()
-    ,
-
-   getKey("response")
-       .test.pressed(variable.key)
-       .success( newAudio("success", "success.wav").play() )
-       .failure( newAudio("failure", "failure.wav").play(), newText(variable.key).bold().center().color("red").settings.css("font-size", "400%").print() )
-    ,
+   newAudio("success", "success.wav")
+        .play()
+   ,
 
    newTimer("wait", 800)
         .start()
