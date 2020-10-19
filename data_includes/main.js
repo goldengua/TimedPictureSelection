@@ -125,6 +125,12 @@ Template( variable =>
     getCanvas("p3")
         .remove()
     ,
+    newCanvas("alien",300,300)
+        .add(   variable.P1x , variable.P1y , newImage("alien1.png").size(100,100) )
+        .add(   variable.P2x , variable.P2y , newImage("alien1.png").size(100,100) )
+        .add(   variable.P3x , variable.P3y , newImage("alien1.png").size(100,100))
+        .print()
+    ,
 //get response
     newKey('response',"wasd")
         .log()
@@ -136,12 +142,7 @@ Template( variable =>
        .success( newAudio("success", "success.wav").play() )
        .failure( newAudio("failure", "failure.wav").play(), newText(variable.key).bold().center().color("red").settings.css("font-size", "400%").print() )
     ,
-   newCanvas("alien",300,300)
-        .add(   variable.P1x , variable.P1y , getImage("gesture_key") )
-        .add(   variable.P2x , variable.P2y , getImage("gesture_key") )
-        .add(   variable.P3x , variable.P3y , getImage("gesture_key") )
-        .print()
-    ,
+
    newTimer("wait", 800)
         .start()
         .wait()
