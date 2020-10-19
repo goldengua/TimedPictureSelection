@@ -72,25 +72,51 @@ Template( variable =>
     getText('fixation')
         .remove()
     ,
-
+    //first position
     newAudio("tone", variable.AudioFile)
-        .play("loop")
+        .play()
     ,
-    newTimer("wait", 800)
+    newCanvas("alien",200,200)
+        .add(   variable.P1x , variable.P1y , getImage("gesture_key") )
+        .print()
+    ,
+    newTimer("wait", 500)
         .start()
         .wait()
     ,
+    getCanvas("alien")
+        .remove()
 
-    //newAudio("tone", variable.AudioFile)
-        //.play()
-    //,
-    newImage("gesture_key",variable.ImageFile)
-        .size(200,200)
+    //second position
+    newAudio("tone", variable.AudioFile)
+        .play()
     ,
     newCanvas("alien",200,200)
-        .add(   0 , 0 , getImage("gesture_key") )
+        .add(   variable.P2x , variable.P2y , getImage("gesture_key") )
         .print()
     ,
+    newTimer("wait", 500)
+        .start()
+        .wait()
+    ,  
+    getCanvas("alien")
+        .remove()
+    //third canvas 
+    newAudio("tone", variable.AudioFile)
+        .play()
+    ,
+    newCanvas("alien",200,200)
+        .add(   variable.P3x , variable.P3y , getImage("gesture_key") )
+        .print()
+    ,
+    newTimer("wait", 500)
+        .start()
+        .wait()
+    ,  
+    getCanvas("alien")
+        .remove()
+
+//get response
     newKey('response',"wasd")
         .log()
         .wait()
