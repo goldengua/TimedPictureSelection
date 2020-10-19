@@ -121,13 +121,17 @@ Template( variable =>
         .log()
         .wait()
     ,
-    getAudio("tone")
-        .stop()
-    ,
+
    getKey("response")
        .test.pressed(variable.key)
        .success( newAudio("success", "success.wav").play() )
        .failure( newAudio("failure", "failure.wav").play(), newText(variable.key).bold().center().color("red").settings.css("font-size", "400%").print() )
+    ,
+   newCanvas("alien",600,600)
+        .add(   variable.P1x , variable.P1y , getImage("gesture_key") )
+        .add(   variable.P2x , variable.P2y , getImage("gesture_key") )
+        .add(   variable.P3x , variable.P3y , getImage("gesture_key") )
+        .print()
     ,
    newTimer("wait", 800)
         .start()
