@@ -72,7 +72,7 @@ Template( variable =>
         .play()
     ,
     newCanvas("p1",300,300)
-        .add(   variable.P1x , variable.P1y , newImage("p1_alien","alien1.png").size(100,100) )
+        .add(   variable.P1x , variable.P1y , newImage("p1_alien",variable.Image).size(100,100) )
         .print()
     ,
     newSelector()
