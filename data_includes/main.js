@@ -33,7 +33,7 @@ newTrial( "welcome" ,
      newImage("3","alien3.png")
          .size(100,100)
     ,
-     newImage("1","alien4.png")
+     newImage("4","alien4.png")
          .size(100,100)
     ,
     newCanvas("intro",200,200)
