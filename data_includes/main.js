@@ -72,6 +72,9 @@ Template( variable =>
     getText('fixation')
         .remove()
     ,
+    newImage("gesture_key","alien1.png")
+        .size(200,200)
+    ,
     //first position
     newAudio("tone", variable.AudioFile)
         .play()
