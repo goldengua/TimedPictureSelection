@@ -1,4 +1,4 @@
-AudioFile,ImageFile,key,Item,Group, P1x, P1y, P2x, P2y, P3x, P3y
+AudioFile,ImageFile,key,Item,Group,P1x,P1y,P2x,P2y,P3x,P3y
 m2_syllable_b3_ai1.wav, alien1.png,w,ai1,1, 0, 200, 200, 200, 400, 200
 m2_syllable_b3_ai2.wav, alien2.png,a,ai2,1, 0, 400, 200, 200, 400, 0
 m2_syllable_b3_ai3.wav, alien3.png,s,ai3,1, 0, 200, 200, 400, 400, 200
