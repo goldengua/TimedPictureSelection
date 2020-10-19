@@ -83,7 +83,7 @@ Template( variable =>
     newAudio("tone", variable.AudioFile)
         .play()
     ,
-    newCanvas("alien",300,300)
+    newCanvas("p1",300,300)
         .add(   variable.P1x , variable.P1y , newImage("alien1.png").size(100,100) )
         .print()
     ,
@@ -91,14 +91,14 @@ Template( variable =>
         .start()
         .wait()
     ,
-    getCanvas("alien")
+    getCanvas("p1")
         .remove()
     ,
     //second position
     newAudio("tone", variable.AudioFile)
         .play()
     ,
-    newCanvas("alien",300,300)
+    newCanvas("p2",300,300)
         .add(   variable.P2x , variable.P2y , newImage("alien1.png").size(100,100) )
         .print()
     ,
@@ -106,7 +106,7 @@ Template( variable =>
         .start()
         .wait()
     ,  
-    getCanvas("alien")
+    getCanvas("p2")
         .remove()
     ,
              
@@ -114,7 +114,7 @@ Template( variable =>
     newAudio("tone", variable.AudioFile)
         .play()
     ,
-    newCanvas("alien",300,300)
+    newCanvas("p3",300,300)
         .add(   variable.P3x , variable.P3y , newImage("alien1.png").size(100,100) )
         .print()
     ,
@@ -122,7 +122,7 @@ Template( variable =>
         .start()
         .wait()
     ,  
-    getCanvas("alien")
+    getCanvas("p3")
         .remove()
     ,
 //get response
