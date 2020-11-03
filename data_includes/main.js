@@ -1,6 +1,6 @@
 PennController.ResetPrefix(null); // Initiates PennController
-//AddHost("https://github.com/goldengua/TimedPictureSelection/tree/master/chunk_includes/");
-PreloadZip("https://github.com/goldengua/TimedPictureSelection/blob/master/chunk_includes/samples.zip");
+AddHost("https://github.com/goldengua/TimedPictureSelection/tree/master/chunk_includes/");
+//PreloadZip("https://github.com/goldengua/TimedPictureSelection/blob/master/chunk_includes/samples.zip");
 // Start typing your code here
  // Initiates PennController
 
