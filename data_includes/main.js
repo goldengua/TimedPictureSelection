@@ -93,7 +93,7 @@ Template( variable =>
        //.wait()
    ,
     getSelector("p1")
-       .test.selected()
+       .test.selected('p1')
        .success( newAudio("success", "success.wav").play() )
        .failure( newAudio("failure", "failure.wav").play() )
     ,
@@ -118,7 +118,7 @@ Template( variable =>
        //.wait()
    ,
    getSelector("p2")
-       .test.selected()
+       .test.selected('p2')
        .success( newAudio("success", "success.wav").play() )
        .failure( newAudio("failure", "failure.wav").play() )
     ,
@@ -144,7 +144,7 @@ Template( variable =>
        //.wait()
    ,
     getSelector("p3")
-       .test.selected()
+       .test.selected('p3')
        .success( newAudio("success", "success.wav").play() )
        .failure( newAudio("failure", "failure.wav").play() )
     ,
