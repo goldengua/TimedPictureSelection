@@ -92,14 +92,14 @@ Template( variable =>
        .log()
        //.wait()
    ,
-    getSelector("p1")
-       .test.selected(getImage("p1_alien") )
-       .success( newAudio("success", "success.wav").play() )
-       .failure( newAudio("failure", "failure.wav").play() )
-    ,
     newTimer("wait", 1200)
         .start()
         .wait()
+    ,
+    getSelector("p1")
+       .test.selected()
+       .success( newAudio("success", "success.wav").play() )
+       .failure( newAudio("failure", "failure.wav").play() )
     ,
     getCanvas("p1")
         .remove()
@@ -117,15 +117,15 @@ Template( variable =>
        .log()
        //.wait()
    ,
-   getSelector("p2")
-       .test.selected(getImage("p2_alien") )
-       .success( newAudio("success", "success.wav").play() )
-       .failure( newAudio("failure", "failure.wav").play() )
-    ,
     newTimer("wait", 1200)
         .start()
         .wait()
-    ,  
+    , 
+    getSelector("p2")
+       .test.selected()
+       .success( newAudio("success", "success.wav").play() )
+       .failure( newAudio("failure", "failure.wav").play() )
+    ,
     getCanvas("p2")
         .remove()
     ,
@@ -143,15 +143,16 @@ Template( variable =>
        .log()
        //.wait()
    ,
-    getSelector("p3")
-       .test.selected(getImage("p3_alien") )
-       .success( newAudio("success", "success.wav").play() )
-       .failure( newAudio("failure", "failure.wav").play() )
-    ,
+
     newTimer("wait", 1200)
         .start()
         .wait()
     ,  
+    getSelector("p3")
+       .test.selected()
+       .success( newAudio("success", "success.wav").play() )
+       .failure( newAudio("failure", "failure.wav").play() )
+    ,          
     getCanvas("p3")
         .remove()
     ,
