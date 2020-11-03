@@ -87,11 +87,16 @@ Template( variable =>
         .add(   variable.P1x , variable.P1y , newImage("p1_alien",variable.ImageFile).size(100,100) )
         .print()
     ,
-    newSelector()
+    newSelector('p1')
        .add( getImage("p1_alien")  )
        .log()
        //.wait()
    ,
+    getSelector("p1")
+       .test.selected( getImage("p1_alien"))
+       .success( newAudio("success", "success.wav").play() )
+       .failure( newAudio("failure", "failure.wav").play() )
+    ,
     newTimer("wait", 1200)
         .start()
         .wait()
@@ -112,6 +117,11 @@ Template( variable =>
        .log()
        //.wait()
    ,
+   getSelector("p2")
+       .test.selected( getImage("p2_alien"))
+       .success( newAudio("success", "success.wav").play() )
+       .failure( newAudio("failure", "failure.wav").play() )
+    ,
     newTimer("wait", 1200)
         .start()
         .wait()
@@ -133,6 +143,11 @@ Template( variable =>
        .log()
        //.wait()
    ,
+    getSelector("p3")
+       .test.selected( getImage("p3_alien"))
+       .success( newAudio("success", "success.wav").play() )
+       .failure( newAudio("failure", "failure.wav").play() )
+    ,
     newTimer("wait", 1200)
         .start()
         .wait()
