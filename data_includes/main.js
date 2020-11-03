@@ -112,7 +112,7 @@ Template( variable =>
         .add(   variable.P2x , variable.P2y , newImage("p2_alien",variable.ImageFile).size(100,100) )
         .print()
     ,
-    newSelector()
+    newSelector('p2')
        .add( getImage("p2_alien")  )
        .log()
        //.wait()
@@ -138,7 +138,7 @@ Template( variable =>
         .add(   variable.P3x , variable.P3y , newImage("p3_alien",variable.ImageFile).size(100,100) )
         .print()
     ,
-    newSelector()
+    newSelector('p3')
        .add( getImage("p3_alien")  )
        .log()
        //.wait()
