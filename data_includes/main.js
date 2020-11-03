@@ -140,22 +140,22 @@ Template( variable =>
     getCanvas("p3")
         .remove()
     ,
-    newCanvas("alien",300,300)
-        .add(   variable.P1x , variable.P1y , newImage(variable.ImageFile).size(100,100) )
-        .add(   variable.P2x , variable.P2y , newImage(variable.ImageFile).size(100,100) )
-        .add(   variable.P3x , variable.P3y , newImage(variable.ImageFile).size(100,100))
-        .print()
-    ,
+    //newCanvas("alien",300,300)
+        //.add(   variable.P1x , variable.P1y , newImage(variable.ImageFile).size(100,100) )
+        //.add(   variable.P2x , variable.P2y , newImage(variable.ImageFile).size(100,100) )
+        //.add(   variable.P3x , variable.P3y , newImage(variable.ImageFile).size(100,100))
+        //.print()
+    //,
    newAudio("success", "success.wav")
         .play()
    ,
 
-   newTimer("wait", 500)
-        .start()
-        .wait()
-    ,         
-    getCanvas("alien")
-        .remove()
+   //newTimer("wait", 500)
+        //.start()
+        //.wait()
+    //,         
+    //getCanvas("alien")
+        //.remove()
     
     
 
