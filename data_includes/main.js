@@ -93,7 +93,7 @@ Template( variable =>
        //.wait()
    ,
     getSelector("p1")
-       .test.selected('p1')
+       .test.selected(getImage("p1_alien") )
        .success( newAudio("success", "success.wav").play() )
        .failure( newAudio("failure", "failure.wav").play() )
     ,
@@ -118,7 +118,7 @@ Template( variable =>
        //.wait()
    ,
    getSelector("p2")
-       .test.selected('p2')
+       .test.selected(getImage("p2_alien") )
        .success( newAudio("success", "success.wav").play() )
        .failure( newAudio("failure", "failure.wav").play() )
     ,
@@ -144,7 +144,7 @@ Template( variable =>
        //.wait()
    ,
     getSelector("p3")
-       .test.selected('p3')
+       .test.selected(getImage("p3_alien") )
        .success( newAudio("success", "success.wav").play() )
        .failure( newAudio("failure", "failure.wav").play() )
     ,
