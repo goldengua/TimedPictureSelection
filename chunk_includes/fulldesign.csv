@@ -7,3 +7,7 @@ m2_syllable_b3_ba1.wav, alien1.png,w,ba1,1, 0, 100, 100, 100, 200, 100
 m2_syllable_b3_ba2.wav, alien2.png,a,ba2,1, 0, 200, 100, 100, 200, 0
 m2_syllable_b3_ba3.wav, alien3.png,s,ba3,1, 0, 100, 100, 200, 200, 100
 m2_syllable_b3_ba4.wav, alien4.png,d,ba4,1, 0, 0, 100, 100, 200, 200
+m2_syllable_b3_bao1.wav,alien1.png,w,ai1,1, 0, 100, 100, 100, 200, 100
+m2_syllable_b3_bao2.wav,alien2.png,a,ai2,1, 0, 200, 100, 100, 200, 0
+m2_syllable_b3_bao3.wav, alien3.png,s,ai3,1, 0, 100, 100, 200, 200, 100
+m2_syllable_b3_bao4.wav, alien4.png,d,ai4,1, 0, 0, 100, 100, 200, 200
