@@ -163,9 +163,7 @@ Template( variable =>
         //.add(   variable.P3x , variable.P3y , newImage(variable.ImageFile).size(100,100))
         //.print()
     //,
-   newAudio("success", "success.wav")
-        .play()
-   ,
+
 
    //newTimer("wait", 500)
         //.start()
