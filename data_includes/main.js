@@ -1,5 +1,5 @@
 PennController.ResetPrefix(null); // Initiates PennController
-AddHost("https://github.com/goldengua/TimedPictureSelection/tree/master/chunk_includes/");
+AddHost("https://github.com/goldengua/TimedPictureSelection/tree/pitch/chunk_includes/");
 // Start typing your code here
  // Initiates PennController
 
@@ -36,7 +36,7 @@ newTrial( "welcome" ,
     newImage("4","e.png")
          .size(100,100)
     ,
-    newImage("5","f.png")
+    newImage("5","fs.png")
          .size(100,100)
     ,
     newImage("6","gs.png")
@@ -65,9 +65,9 @@ newTrial( "welcome" ,
 .log( "ID" , getVar("ID") )
 Template( variable =>
     newTrial( "experiment" ,
-    newAudio('bgm',"drumloop_65.wav")
-        .play()
-    ,
+    //newAudio('bgm',"drumloop_65.wav")
+        //.play()
+    //,
     newText("fixation",'+')
         .print()
     ,
