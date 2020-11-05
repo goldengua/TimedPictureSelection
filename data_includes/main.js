@@ -93,7 +93,7 @@ Template( variable =>
     //newAudio("tone", variable.AudioFile)
         //.play()
     //,
-    newImage("pitch_img", variable.ImageFile)
+    newImage("pitch_img", "as.png")
    
    ,
     newCanvas("alien",200,200)
