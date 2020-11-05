@@ -46,9 +46,9 @@ newTrial( "welcome" ,
          .add(   0 , 0 , getImage("1") )
          .add(   100 , 0 , getImage("2") )
          .add(   200 , 0 , getImage("3") )
-         .add(   100 , 0 , getImage("4") )
+         .add(   0 , 100 , getImage("4") )
          .add( 100, 100, getImage("5"))
-         .add( 100, 200, getImage("6"))
+         .add( 200, 100, getImage("6"))
          .print()
     ,
     newTextInput("inputID")
