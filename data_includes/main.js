@@ -89,15 +89,14 @@ Template( variable =>
         .start()
         .wait()
     ,
-
     //newAudio("tone", variable.AudioFile)
         //.play()
     //,
-    //newImage("pitch_img", variable.ImageFile)
-        //.size(200,200)
-   //,
+    newImage("pitch_img", variable.ImageFile)
+        .size(200,200)
+   ,
     newCanvas("alien",200,200)
-        .add(   0 , 0 , getImage(variable.ImageFile).size(200,200) )
+        .add(   0 , 0 , getImage("pitch_img"))
         .print()
     ,
     newKey('response',"asdjkl")
@@ -107,9 +106,7 @@ Template( variable =>
     getAudio("tone")
         .stop()
     ,
-   getImage("pitch_img")
-        .remove()
-   ,
+
    getKey("response")
        .test.pressed(variable.key)
        .success( newAudio("success", "success.wav").play() )
