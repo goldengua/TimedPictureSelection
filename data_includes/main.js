@@ -93,11 +93,11 @@ Template( variable =>
     //newAudio("tone", variable.AudioFile)
         //.play()
     //,
-    newImage("pitch_img", variable.ImageFile)
-        .size(200,200)
-   ,
+    //newImage("pitch_img", variable.ImageFile)
+        //.size(200,200)
+   //,
     newCanvas("alien",200,200)
-        .add(   0 , 0 , getImage("pitch_img").size(200,200) )
+        .add(   0 , 0 , getImage(variable.ImageFile).size(200,200) )
         .print()
     ,
     newKey('response',"asdjkl")
