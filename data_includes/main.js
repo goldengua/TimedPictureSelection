@@ -14,11 +14,13 @@ newTrial( "welcome" ,
     ,
     newText("<p>In this experiment, you will first see four different kinds of aliens. </p>")
     ,
-    newText("<p>Press <strong> [w] [a] [s] [d] </strong>to catch these aliens as quickly as possible.</p>")
+    newText("<p>Press <strong> [a] [s] [d] and [j] [k] [l] </strong>to catch these aliens as quickly as possible.</p>")
     ,
-    newText("<p>For the <strong>green</strong> alien, press <strong>[w]</strong>; for <strong>blue</strong>, press <strong>[a]</strong>; </p>")
+    newText("<p><strong>Green</strong> alien: press <strong>[a]</strong>; <strong>Red </strong>alien: press <strong>[s]</strong>; </p>")
     ,
-    newText("<p>for <strong>pink</strong>, press <strong>[s]</strong>; for <strong>yellow</strong>, press <strong>[d]</strong>. </p>")
+    newText("<p><strong>Purple</strong> alien: press <strong>[d]</strong>; <strong>Black</strong> alien: press <strong>[j]</strong>. </p>")
+    ,
+    newText("<p><strong>Orange</strong> alien: press <strong>[k]</strong>; <strong>Blue</strong> alien: press <strong>[l]</strong>. </p>")
     ,
     newText("<p>Please get yourself familiar with the action required for catching aliens. </p>")
     ,
