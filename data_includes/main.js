@@ -16,11 +16,9 @@ newTrial( "welcome" ,
     ,
     newText("<p>Press <strong> [a] [s] [d] and [j] [k] [l] </strong>to catch these aliens as quickly as possible.</p>")
     ,
-    newText("<p><strong>Green</strong> alien: press <strong>[a]</strong>; <strong>Red </strong>alien: press <strong>[s]</strong>; </p>")
+    newText("<p><strong>Green</strong> alien: press <strong>[a]</strong>; <strong>Red </strong>alien: press <strong>[s]</strong>; <strong>Purple</strong> alien: press <strong>[d]</strong>; </p>")
     ,
-    newText("<p><strong>Purple</strong> alien: press <strong>[d]</strong>; <strong>Black</strong> alien: press <strong>[j]</strong>. </p>")
-    ,
-    newText("<p><strong>Orange</strong> alien: press <strong>[k]</strong>; <strong>Blue</strong> alien: press <strong>[l]</strong>. </p>")
+    newText("<p><strong>Black</strong> alien: press <strong>[j]</strong>; <strong>Orange</strong> alien: press <strong>[k]</strong>; <strong>Blue</strong> alien: press <strong>[l]</strong>. </p>")
     ,
     newText("<p>Please get yourself familiar with the action required for catching aliens. </p>")
     ,
@@ -44,12 +42,12 @@ newTrial( "welcome" ,
     newImage("6","gs.png")
          .size(100,100)
     ,
-    newCanvas(200,300)
+    newCanvas(300,200)
          .add(   0 , 0 , getImage("1") )
          .add(   100 , 0 , getImage("2") )
-         .add(   0 , 100 , getImage("3") )
-         .add(   100 , 100 , getImage("4") )
-         .add( 0, 200, getImage("5"))
+         .add(   200 , 0 , getImage("3") )
+         .add(   100 , 0 , getImage("4") )
+         .add( 100, 100, getImage("5"))
          .add( 100, 200, getImage("6"))
          .print()
     ,
