@@ -24,23 +24,31 @@ newTrial( "welcome" ,
     ,
     newText("<p>Please enter your ID and then click the button below to start the experiment.</p>")
     ,
-    newImage("1","alien1.png")
+    newImage("1","as.png")
          .size(100,100)
     ,
-    newImage("2","alien2.png")
+    newImage("2","c.png")
          .size(100,100)
     ,
-    newImage("3","alien3.png")
+    newImage("3","d.png")
          .size(100,100)
     ,
-    newImage("4","alien4.png")
+    newImage("4","e.png")
          .size(100,100)
     ,
-    newCanvas(200,200)
+    newImage("5","f.png")
+         .size(100,100)
+    ,
+    newImage("6","gs.png")
+         .size(100,100)
+    ,
+    newCanvas(200,300)
          .add(   0 , 0 , getImage("1") )
          .add(   100 , 0 , getImage("2") )
          .add(   0 , 100 , getImage("3") )
          .add(   100 , 100 , getImage("4") )
+         .add( 0, 200, getImage("5"))
+         .add( 100, 200, getImage("6"))
          .print()
     ,
     newTextInput("inputID")
@@ -91,7 +99,7 @@ Template( variable =>
         .add(   0 , 0 , getImage("gesture_key") )
         .print()
     ,
-    newKey('response',"wasd")
+    newKey('response',"asdjkl")
         .log()
         .wait()
     ,
