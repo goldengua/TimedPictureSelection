@@ -1,8 +1,8 @@
 AudioFile,ImageFile,key,Item,Group
-As_03A.wav,as.png,a,As3A,1
-C_03A.wav,c.png,s,C3A,1
-D_03A.wav,d.png,d,D3A,1
-E_03A.wav,e.png,j,E3A,1
-Fs_03A.wav,fs.png,k,F3A,1
-Gs_03A.wav,gs.png,l,Gs3A,1
+As_03A.wav,1,a,As3A,1
+C_03A.wav,2,s,C3A,1
+D_03A.wav,3,d,D3A,1
+E_03A.wav,4,j,E3A,1
+Fs_03A.wav,5,k,F3A,1
+Gs_03A.wav,6,l,Gs3A,1
 
