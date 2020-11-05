@@ -1,109 +1,137 @@
-PennController.ResetPrefix(null);
+PennController.ResetPrefix(null); // Initiates PennController
+AddHost("https://github.com/goldengua/TimedPictureSelection/tree/master/chunk_includes/");
+// Start typing your code here
+ // Initiates PennController
 
-Header(
-    // empty header
-)
-.log( "ID" , getVar("ID") )
+// Start typing your code here
 
-
-newTrial(
+Sequence( "welcome" , randomize("experiment") , "send" , "final" )
+newTrial( "welcome" ,
     defaultText
-        .center()
         .print()
     ,
-    newText("<p>Welcome to this experiment.</p>")
+    newText("<p>Welcome!</p>")
     ,
-    newText("<p>You will listen to sentences and indicate which of two pictures is being described.</p>")
+    newText("<p>In this experiment, you will first see four different kinds of aliens. </p>")
     ,
-    newText("<p>Please try to click the picture you think the sentence describes as fast as you can.</p>")
+    newText("<p>Press <strong> [w] [a] [s] [d] </strong>to catch these aliens as quickly as possible.</p>")
     ,
-    newText("<p>Please type in your ID below and then click on the Start button to start the experiment.</p>")
+    newText("<p>For the <strong>green</strong> alien, press <strong>[w]</strong>; for <strong>blue</strong>, press <strong>[a]</strong>; </p>")
     ,
-    newTextInput("ID", "")
-        .center()
+    newText("<p>for <strong>pink</strong>, press <strong>[s]</strong>; for <strong>yellow</strong>, press <strong>[d]</strong>. </p>")
+    ,
+    newText("<p>Please get yourself familiar with the action required for catching aliens. </p>")
+    ,
+    newText("<p>Please enter your ID and then click the button below to start the experiment.</p>")
+    ,
+    newImage("1","alien1.png")
+         .size(100,100)
+    ,
+    newImage("2","alien2.png")
+         .size(100,100)
+    ,
+    newImage("3","alien3.png")
+         .size(100,100)
+    ,
+    newImage("4","alien4.png")
+         .size(100,100)
+    ,
+    newCanvas(200,200)
+         .add(   0 , 0 , getImage("1") )
+         .add(   100 , 0 , getImage("2") )
+         .add(   0 , 100 , getImage("3") )
+         .add(   100 , 100 , getImage("4") )
+         .print()
+    ,
+    newTextInput("inputID")
         .print()
     ,
     newButton("Start")
-        .center()
         .print()
-        .wait( getTextInput("ID").testNot.text("") )
+        .wait()
     ,
-    newVar("ID","")
+    newVar("ID")
         .global()
-        .set( getTextInput("ID") )
+        .set( getTextInput("inputID") )
 )
-
-
-Template( "fulldesign.csv" ,
-    row => newTrial(
-        newText("sentence", row.Sentence)
-            .center()
-            .hidden()
-            .print()
-        ,
-        newTimer(200)
-            .start()
-            .wait()
-        ,
-        newSelector("choice")
-            .log()
-            .frame("dotted 2px purple")
-            .disable()
-        ,
-        defaultImage
-            .size(300,300)
-            .selector("choice")
-        ,
-        newCanvas(650,300)
-            .add(   0 , 0 , newImage(row.PictureSg) )
-            .add( 350 , 0 , newImage(row.PicturePl) )
-            .print()
-        ,
-        getSelector("choice")
-            .shuffle()
-            .keys("F","J")
-        ,
-        newTimer(500)
-            .start()
-            .wait()
-        ,
-        newAudio("description", row.Audio)
-            .log()
-            .play()
-        ,
-        getText("sentence")
-            .unfold(row.Duration)
-        ,
-        getSelector("choice")
-            .enable()
-            .once()
-            .wait()
-        ,
-        newTimer(500)
-            .start()
-            .wait()
-        ,
-        getAudio("description")
-            .wait("first")
-    )
-    .log( "Item"     , row.Item     )
-    .log( "Group"    , row.Group    )
-    .log( "Ending"   , row.Ending   )
-    .log( "Duration" , row.Duration )
-)
-
-
-SendResults();
-
-
-newTrial(
-    newText("Thank you for your participation!")
+.log( "ID" , getVar("ID") )
+Template( variable =>
+    newTrial( "experiment" ,
+    newAudio('bgm',"drumloop_65.wav")
+        .play()
+    ,
+    newText("fixation",'+')
         .print()
     ,
-    newText("<p><a href='https://www.pcibex.net/' target='_blank'>Click here to validate your submission</a></p>")
+
+    newTimer("wait", 800)
+        .start()
+        .wait()
+    ,
+
+    getText('fixation')
+        .remove()
+    ,
+
+    newAudio("tone", variable.AudioFile)
+        .play("loop")
+    ,
+    newTimer("wait", 800)
+        .start()
+        .wait()
+    ,
+
+    //newAudio("tone", variable.AudioFile)
+        //.play()
+    //,
+    newImage("gesture_key",variable.ImageFile)
+        .size(200,200)
+    ,
+    newCanvas("alien",200,200)
+        .add(   0 , 0 , getImage("gesture_key") )
         .print()
     ,
-    newTimer(1)
+    newKey('response',"wasd")
+        .log()
+        .wait()
+    ,
+    getAudio("tone")
+        .stop()
+    ,
+   getKey("response")
+       .test.pressed(variable.key)
+       .success( newAudio("success", "success.wav").play() )
+       .failure( newAudio("failure", "failure.wav").play(), newText(variable.key).bold().center().color("red").settings.css("font-size", "400%").print() )
+    ,
+   newTimer("wait", 800)
+        .start()
+        .wait()
+    ,         
+    getCanvas("alien")
+        .remove()
+    
+
+
+    //newText("continue","Press space bar to continue;")
+        //.print()
+    //,
+    //newKey('space',' ')
+         //.wait()
+
+  )
+  .log( "ID"     , getVar("ID")    )
+  .log( "Item"   , variable.Item   )
+  .log( "Group"  , variable.Group  )
+)
+
+SendResults( "send" )
+newTrial( "final" ,
+    newText("<p>Thank you for your participation!</p>")
+        .print()
+    ,
+    newText("<p><a href='https://www.pcibex.net/' href='_blank'>Click here to validate your participation.</a></p>")
+        .print()
+    ,
+    newButton("void")
         .wait()
 )
-.setOption("countsForProgressBar",false)
