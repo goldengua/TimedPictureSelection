@@ -128,8 +128,6 @@ Template( variable =>
 
 
   )
-  .log( "Item"   , variable.Item   )
-  .log( "Group"  , variable.Group  )
 )
 
 Template( variable =>
