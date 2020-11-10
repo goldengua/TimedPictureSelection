@@ -155,11 +155,11 @@ Template( variable =>
         .wait()
     ,
 
-    newImage("pitch_img", variable.ImageFile)
-        .size(200,200)
-   ,
+    //newImage("pitch_img", variable.ImageFile)
+        //.size(200,200)
+   //,
     newCanvas("alien",200,200)
-        .add(   0 , 0 , getImage("pitch_img"))
+        .add(   0 , 0 , getImage(variable.ImageFile).size(200,200))
         .print()
     ,
     newKey('response',"asdjkl")
