@@ -94,10 +94,9 @@ Template( variable =>
     newImage("pitch_img", variable.ImageFile)
         .size(200,200)
    ,
-    newText("note",variable.item)
-   ,
+
     newText("description","This is note ")
-        .after(getText(variable.item))
+        .after(getText(variable.Item))
         .after(newText(", please press"))
         .after(newText(variable.key))
         .print()
