@@ -94,7 +94,7 @@ Template( variable =>
    //,
 
     newText("description","This is note ")
-        .after(getText(variable.Item))
+        .after(newText(variable.Item))
         .after(newText(", please press"))
         .after(newText(variable.key))
         .print()
