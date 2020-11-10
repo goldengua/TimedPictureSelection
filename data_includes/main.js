@@ -81,7 +81,7 @@ Template( variable =>
         .remove()
     ,
     
-    newAudio("tone", "C_03A.wav")
+    newAudio("tone", variable.AudioFile)
         .play("loop")
     ,
     newTimer("wait", 800)
@@ -94,8 +94,8 @@ Template( variable =>
    ,
 
     newText("description","This is note ")
-        .after(newText(variable.Item))
-        .after(newText(", please press"))
+        .after(newText(variable.note))
+        .after(newText(", please press key "))
         .after(newText(variable.key))
         .print()
    ,
