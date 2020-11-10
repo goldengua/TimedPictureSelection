@@ -6,7 +6,7 @@ AddHost("https://github.com/goldengua/TimedPictureSelection/tree/pitch/chunk_inc
 
 // Start typing your code here
 
-Sequence( "welcome" , "practice",randomize("experiment") , "send" , "final" )
+Sequence( "welcome" , "practice_intro","practice", "exp_intro", randomize("experiment") , "send" , "final" )
 newTrial( "welcome" ,
     defaultText
         .print()
@@ -65,6 +65,12 @@ newTrial( "welcome" ,
 )
 .log( "ID" , getVar("ID") )
 
+newTrial( "practice_intro" ,
+    defaultText
+        .print()
+    ,
+    newText("<p>Now let us practice how to catch aliens.</p>")
+)
 Template( variable =>
     newTrial( "practice" ,
 
@@ -93,7 +99,8 @@ Template( variable =>
         .size(200,200)
    ,
 
-    newText("description","This alien is&nbsp")
+    newText("description","")
+        .after(newText("This alien is&nbsp"))
         .after(newText(variable.color))
         .after(newText(",&nbspplease press key&nbsp"))
         .after(newText(variable.key))
@@ -115,7 +122,7 @@ Template( variable =>
    getKey("response")
        .test.pressed(variable.key)
        .success( newAudio("success", "success.wav").play() )
-       .failure( newAudio("failure", "failure.wav").play(), newText(variable.key).bold().center().color("red").settings.css("font-size", "400%").print() )
+       .failure( newAudio("failure", "failure.wav").play() )
     ,
    newTimer("wait2", 800)
         .start()
@@ -129,6 +136,12 @@ Template( variable =>
   .log( "ID"     , getVar("ID")    )
   .log( "Item"   , variable.Item   )
   .log( "Group"  , variable.Group  )
+)
+newTrial( "exp_intro" ,
+    defaultText
+        .print()
+    ,
+    newText("<p>Now let us test what you have learnt.</p>")
 )
 
 Template( variable =>
