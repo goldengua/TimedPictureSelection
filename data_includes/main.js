@@ -101,7 +101,7 @@ Template( variable =>
    ,
     newCanvas("alien",200,200)
         .add( 0, 220, getText("description") )
-        .add(   0 , 0 , newImage(variable.ImageFile).size(200,200))
+        .add(   0 , 0 , newImage("img",variable.ImageFile).size(200,200))
         .print()
     ,
     newKey('response',"asdjkl")
