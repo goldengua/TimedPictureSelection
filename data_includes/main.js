@@ -25,31 +25,31 @@ newTrial( "welcome" ,
     ,
     newText("<p>Please enter your ID and then click the button below to start the experiment.</p>")
     ,
-    newImage("1","as.png")
+    newImage("c.png","c.png")
          .size(100,100)
     ,
-    newImage("2","c.png")
+    newImage("d.png","d.png")
          .size(100,100)
     ,
-    newImage("3","d.png")
+    newImage("e.png","e.png")
          .size(100,100)
     ,
-    newImage("4","e.png")
+    newImage("fs.png","fs.png")
          .size(100,100)
     ,
-    newImage("5","fs.png")
+    newImage("gs.png","gs.png")
          .size(100,100)
     ,
-    newImage("6","gs.png")
+    newImage("as.png","as.png")
          .size(100,100)
     ,
     newCanvas(300,200)
-         .add(   0 , 0 , getImage("1") )
-         .add(   100 , 0 , getImage("2") )
-         .add(   200 , 0 , getImage("3") )
-         .add(   0 , 100 , getImage("4") )
-         .add( 100, 100, getImage("5"))
-         .add( 200, 100, getImage("6"))
+         .add(   0 , 0 , getImage("c.png") )
+         .add(   100 , 0 , getImage("d.png") )
+         .add(   200 , 0 , getImage("e.png") )
+         .add(   0 , 100 , getImage("fs.png") )
+         .add( 100, 100, getImage("gs.png"))
+         .add( 200, 100, getImage("as.png"))
          .print()
     ,
     newTextInput("inputID")
@@ -89,9 +89,9 @@ Template( variable =>
         .wait()
     ,
 
-    newImage("pitch_img1", variable.ImageFile)
-        .size(200,200)
-   ,
+    //newImage("pitch_img1", variable.ImageFile)
+        //.size(200,200)
+   //,
 
     newText("description","This alien is ")
         .after(newText(variable.color))
@@ -101,7 +101,7 @@ Template( variable =>
    ,
     newCanvas("alien",200,200)
         .add( 0, 220, getText("description") )
-        .add(   0 , 0 , getImage("pitch_img1").size(200,200))
+        .add(   0 , 0 , getImage(variable.ImageFile).size(200,200))
         .print()
     ,
     newKey('response',"asdjkl")
