@@ -89,9 +89,9 @@ Template( variable =>
         .wait()
     ,
 
-    //newImage("pitch_img1", "c.png")
-       // .size(200,200)
-   //,
+    newImage("pitch_img1", variable.ImageFile)
+        .size(200,200)
+   ,
 
     newText("description","This is note ")
         .after(newText(variable.Item))
@@ -101,7 +101,7 @@ Template( variable =>
    ,
     newCanvas("alien",200,200)
         .add( 0, 220, getText("description") )
-        .add(   0 , 0 , newImage("img",variable.ImageFile).size(200,200))
+        .add(   0 , 0 , getImage("pitch_img1").size(200,200))
         .print()
     ,
     newKey('response',"asdjkl")
