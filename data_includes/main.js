@@ -89,7 +89,7 @@ Template( variable =>
         .wait()
     ,
 
-    newImage("pitch_img1", variable.ImageFile)
+    newImage(variable.ImageFile, variable.ImageFile)
         .size(200,200)
    ,
 
@@ -101,7 +101,7 @@ Template( variable =>
    ,
     newCanvas("alien",200,200)
         .add( 0, 220, getText("description") )
-        .add(   0 , 0 , getImage("pitch_img1").size(200,200))
+        .add(   0 , 0 , getImage(variable.ImageFile).size(200,200))
         .print()
     ,
     newKey('response',"asdjkl")
@@ -155,11 +155,11 @@ Template( variable =>
         .wait()
     ,
 
-    newImage("pitch_img", variable.ImageFile)
+    newImage(variable.ImageFile, variable.ImageFile)
         .size(200,200)
    ,
     newCanvas("alien",200,200)
-        .add(   0 , 0 , getImage("pitch_img").size(200,200))
+        .add(   0 , 0 , getImage(variable.ImageFile).size(200,200))
         .print()
     ,
     newKey('response',"asdjkl")
