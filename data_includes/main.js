@@ -93,8 +93,8 @@ Template( variable =>
         .size(200,200)
    ,
 
-    newText("description","This is note ")
-        .after(newText(variable.note))
+    newText("description","This alien is ")
+        .after(newText(variable.color))
         .after(newText(", please press key "))
         .after(newText(variable.key))
         .print()
@@ -104,7 +104,7 @@ Template( variable =>
         .add(   0 , 0 , getImage("pitch_img1").size(200,200))
         .print()
     ,
-    newKey('response',"asdjkl")
+    newKey('response',"123456")
         .log()
         .wait()
     ,
