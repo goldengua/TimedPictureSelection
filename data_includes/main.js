@@ -81,7 +81,7 @@ Template( variable =>
         .remove()
     ,
     
-    newAudio("tone", variable.AudioFile)
+    newAudio("tone", "C_03A.wav")
         .play("loop")
     ,
     newTimer("wait", 800)
@@ -91,7 +91,7 @@ Template( variable =>
     //newAudio("tone", variable.AudioFile)
         //.play()
     //,
-    newImage("pitch_img1", variable.ImageFile)
+    newImage("pitch_img1", "c.png")
         .size(200,200)
    ,
 
