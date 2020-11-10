@@ -70,6 +70,11 @@ newTrial( "practice_intro" ,
         .print()
     ,
     newText("<p>Now let us practice how to catch aliens.</p>")
+    ,
+    newButton("Continue")
+        .print()
+        .wait()
+    
 )
 Template( variable =>
     newTrial( "practice" ,
@@ -142,6 +147,10 @@ newTrial( "exp_intro" ,
         .print()
     ,
     newText("<p>Now let us test what you have learnt.</p>")
+    ,
+    newButton("Continue")
+        .print()
+        .wait()
 )
 
 Template( variable =>
