@@ -6,7 +6,7 @@ AddHost("https://github.com/goldengua/TimedPictureSelection/tree/pitch/chunk_inc
 
 // Start typing your code here
 
-Sequence( "welcome" , randomize("experiment") , "send" , "final" )
+Sequence( "welcome" , "practice",randomize("experiment") , "send" , "final" )
 newTrial( "welcome" ,
     defaultText
         .print()
@@ -64,11 +64,79 @@ newTrial( "welcome" ,
         .set( getTextInput("inputID") )
 )
 .log( "ID" , getVar("ID") )
+
 Template( variable =>
-    newTrial( "experiment" ,
-    //newAudio('bgm',"drumloop_65.wav")
+    newTrial( "practice" ,
+
+    newText("fixation",'+')
+        .print()
+    ,
+    
+    newTimer("wait", 800)
+        .start()
+        .wait()
+    ,
+
+    getText('fixation')
+        .remove()
+    ,
+    
+    newAudio("tone", variable.AudioFile)
+        .play("loop")
+    ,
+    newTimer("wait", 800)
+        .start()
+        .wait()
+    ,
+    //newAudio("tone", variable.AudioFile)
         //.play()
     //,
+    newImage("pitch_img", variable.ImageFile)
+        .size(200,200)
+   ,
+    newText("note",variable.item)
+   ,
+    newText("description","This is note ")
+        .after(getText(variable.item))
+        .after(newText(", please press"))
+        .after(newText(variable.key))
+        .print()
+   ,
+    newCanvas("alien",200,200)
+        .add( 0, 0, getText("description") )
+        .add(   0 , 0 , getImage("pitch_img"))
+        .print()
+    ,
+    newKey('response',"asdjkl")
+        .log()
+        .wait()
+    ,
+    getAudio("tone")
+        .stop()
+    ,
+
+   getKey("response")
+       .test.pressed(variable.key)
+       .success( newAudio("success", "success.wav").play() )
+       .failure( newAudio("failure", "failure.wav").play(), newText(variable.key).bold().center().color("red").settings.css("font-size", "400%").print() )
+    ,
+   newTimer("wait2", 800)
+        .start()
+        .wait()
+    ,         
+    getCanvas("alien")
+        .remove()
+
+
+  )
+  .log( "ID"     , getVar("ID")    )
+  .log( "Item"   , variable.Item   )
+  .log( "Group"  , variable.Group  )
+)
+
+Template( variable =>
+    newTrial( "experiment" ,
+
     newText("fixation",'+')
         .print()
     ,
@@ -89,9 +157,7 @@ Template( variable =>
         .start()
         .wait()
     ,
-    //newAudio("tone", variable.AudioFile)
-        //.play()
-    //,
+
     newImage("pitch_img", variable.ImageFile)
         .size(200,200)
    ,
@@ -118,14 +184,7 @@ Template( variable =>
     ,         
     getCanvas("alien")
         .remove()
-    
 
-
-    //newText("continue","Press space bar to continue;")
-        //.print()
-    //,
-    //newKey('space',' ')
-         //.wait()
 
   )
   .log( "ID"     , getVar("ID")    )
