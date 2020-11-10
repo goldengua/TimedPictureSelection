@@ -88,12 +88,10 @@ Template( variable =>
         .start()
         .wait()
     ,
-    //newAudio("tone", variable.AudioFile)
-        //.play()
-    //,
-    newImage("pitch_img1", "c.png")
-        .size(200,200)
-   ,
+
+    //newImage("pitch_img1", "c.png")
+       // .size(200,200)
+   //,
 
     newText("description","This is note ")
         .after(getText(variable.Item))
@@ -103,7 +101,7 @@ Template( variable =>
    ,
     newCanvas("alien",200,200)
         .add( 0, 0, getText("description") )
-        .add(   0 , 0 , getImage("pitch_img1"))
+        .add(   0 , 0 , newImage("c.png").size(200,200))
         .print()
     ,
     newKey('response',"asdjkl")
