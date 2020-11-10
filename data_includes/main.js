@@ -128,6 +128,9 @@ Template( variable =>
 
 
   )
+  .log( "ID"     , getVar("ID")    )
+  .log( "Item"   , variable.Item   )
+  .log( "Group"  , variable.Group  )
 )
 
 Template( variable =>
