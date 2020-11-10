@@ -102,7 +102,7 @@ Template( variable =>
     newText("description","")
         .after(newText("This alien is&nbsp"))
         .after(newText(variable.color))
-        .after(newText(",&nbspplease press key&nbsp"))
+        .after(newText("&nbspplease press key&nbsp"))
         .after(newText(variable.key))
         .print()
    ,
