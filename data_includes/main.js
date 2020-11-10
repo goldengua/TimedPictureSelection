@@ -116,7 +116,7 @@ Template( variable =>
         .add(   0 , 0 , getImage("practice_img").size(200,200))
         .print()
     ,
-    newKey('response',"asdjkl")
+    newKey('response',"1234�")
         .log()
         .wait()
     ,
@@ -184,7 +184,7 @@ Template( variable =>
         .add(   0 , 0 , getImage("exp_img").size(200,200))
         .print()
     ,
-    newKey('response',"asdjkl")
+    newKey('response',"1234�")
         .log()
         .wait()
     ,
