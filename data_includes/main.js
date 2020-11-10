@@ -100,8 +100,8 @@ Template( variable =>
         .print()
    ,
     newCanvas("alien",200,200)
-        .add( 0, 0, getText("description") )
-        .add(   0 , 0 , newImage("c.png").size(200,200))
+        .add( 0, 220, getText("description") )
+        .add(   0 , 0 , newImage(variable.ImageFile).size(200,200))
         .print()
     ,
     newKey('response',"asdjkl")
