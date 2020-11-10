@@ -15,11 +15,11 @@ newTrial( "welcome" ,
     ,
     newText("<p>In this experiment, you will first see four different kinds of aliens. </p>")
     ,
-    newText("<p>Press <strong> [a] [s] [d] and [j] [k] [l] </strong>to catch these aliens as quickly as possible.</p>")
+    newText("<p>Press <strong> 1, 2, 3, 4, 5 and 6</strong>to catch these aliens as quickly as possible.</p>")
     ,
-    newText("<p><strong>Green</strong> alien: press <strong>[a]</strong>; <strong>Red </strong>alien: press <strong>[s]</strong>; <strong>Purple</strong> alien: press <strong>[d]</strong>; </p>")
+    newText("<p><strong>Red</strong> alien: press <strong>[1]</strong>; <strong>Orange </strong>alien: press <strong>[2]</strong>; <strong>Yellow</strong> alien: press <strong>[3]</strong>; </p>")
     ,
-    newText("<p><strong>Black</strong> alien: press <strong>[j]</strong>; <strong>Orange</strong> alien: press <strong>[k]</strong>; <strong>Blue</strong> alien: press <strong>[l]</strong>. </p>")
+    newText("<p><strong>Green</strong> alien: press <strong>[4]</strong>; <strong>Blue</strong> alien: press <strong>[5]</strong>; <strong>Purple</strong> alien: press <strong>[6]</strong>. </p>")
     ,
     newText("<p>Please get yourself familiar with the action required for catching aliens. </p>")
     ,
@@ -116,7 +116,7 @@ Template( variable =>
         .add(   0 , 0 , getImage("practice_img").size(200,200))
         .print()
     ,
-    newKey('response',"1234�")
+    newKey('response',"123456�")
         .log()
         .wait()
     ,
@@ -184,7 +184,7 @@ Template( variable =>
         .add(   0 , 0 , getImage("exp_img").size(200,200))
         .print()
     ,
-    newKey('response',"1234�")
+    newKey('response',"123456�")
         .log()
         .wait()
     ,
