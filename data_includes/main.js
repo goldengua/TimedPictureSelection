@@ -91,7 +91,7 @@ Template( variable =>
     //newAudio("tone", variable.AudioFile)
         //.play()
     //,
-    newImage("pitch_img", variable.ImageFile)
+    newImage("pitch_img1", variable.ImageFile)
         .size(200,200)
    ,
 
@@ -103,7 +103,7 @@ Template( variable =>
    ,
     newCanvas("alien",200,200)
         .add( 0, 0, getText("description") )
-        .add(   0 , 0 , getImage("pitch_img"))
+        .add(   0 , 0 , getImage("pitch_img1"))
         .print()
     ,
     newKey('response',"asdjkl")
@@ -128,7 +128,6 @@ Template( variable =>
 
 
   )
-  .log( "ID"     , getVar("ID")    )
   .log( "Item"   , variable.Item   )
   .log( "Group"  , variable.Group  )
 )
