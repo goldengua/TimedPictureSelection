@@ -93,9 +93,9 @@ Template( variable =>
         .size(200,200)
    ,
 
-    newText("description","This alien is  ")
+    newText("description","This alien is&nbsp")
         .after(newText(variable.color))
-        .after(newText(", please press key "))
+        .after(newText(",&nbspplease press key&nbsp"))
         .after(newText(variable.key))
         .print()
    ,
