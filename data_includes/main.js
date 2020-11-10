@@ -104,7 +104,7 @@ Template( variable =>
         .add(   0 , 0 , getImage("pitch_img1").size(200,200))
         .print()
     ,
-    newKey('response',"123456")
+    newKey('response',"asdjkl")
         .log()
         .wait()
     ,
