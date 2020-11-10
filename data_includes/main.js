@@ -89,11 +89,11 @@ Template( variable =>
         .wait()
     ,
 
-    newImage("pratice_img", variable.ImageFile)
+    newImage("practice_img", variable.ImageFile)
         .size(200,200)
    ,
 
-    newText("description","This alien is ")
+    newText("description","This alien is  ")
         .after(newText(variable.color))
         .after(newText(", please press key "))
         .after(newText(variable.key))
