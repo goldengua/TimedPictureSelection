@@ -1,0 +1,35 @@
+<script language="javascript" type="text/javascript">
+function randomString() {
+  var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+  var string_length = 8;
+  var randomstring = '';
+  for (var i=0; i<string_length; i++) {
+    var rnum = Math.floor(Math.random() * chars.length);
+    randomstring += chars.substring(rnum,rnum+1);
+  }
+  document.randform.randomfield.value = randomstring;
+}
+</script>
+
+<table>
+
+<tr>
+  <td colspan="1"> <b> Press the button below to generate your identification code, save the code before you end the experiment。 </b> </td>
+ </tr>
+
+<tr>
+<td>
+<form name="randform">
+<input type="button" value="Generate Identification Code" onClick="randomString();">&nbsp;
+<input type="text" name="randomfield" value="">
+</form>
+
+</td>
+</tr>
+
+
+</table>
+
+<p>
+<b> Please go to the next page to end the experiment. Do not turn off the page until the data has been uploaded. Thank you! </b>
+</p>
