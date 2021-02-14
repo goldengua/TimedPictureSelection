@@ -6,7 +6,7 @@ AddHost("https://github.com/goldengua/TimedPictureSelection/tree/master/chunk_in
 
 // Start typing your code here
 
-Sequence( "welcome" , randomize("experiment") , "exit","send" , "final" )
+Sequence( "welcome" , subsequence(randomize("experiment"), "break"), "exit","send" , "final" )
 newTrial( "welcome" ,
     defaultText
         .print()
@@ -185,7 +185,16 @@ Template( variable =>
   .log( "Item"   , variable.Item   )
   .log( "Group"  , variable.Group  )
 )
-
+newTrial( "break" ,
+    defaultText
+        .print()
+    ,
+    newText("<p>You have finished a block! You can take a break now. </p>")
+    ,
+    newButton("Continue")
+        .print()
+        .wait()    
+)
 var items = [
 ["exit", "Form", {consentRequired: false, html: {include: "exit.html" }} ],
 ];
