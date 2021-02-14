@@ -186,9 +186,18 @@ Template( variable =>
   .log( "Group"  , variable.Group  )
 )
 // Completion screen for the experiement
-var items = [
-["exit", "Form", {consentRequired: false, html: {include: "exit.html" }} ],
-];
+let alphanum = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz"; 
+
+PennController(
+    newVar("ID", "")
+        .settings.global()
+        .set(v =>[...Array(8)].reduce(a=>a+alphanum.charAt(Math.floor(Math.random()*alphanum.length)),''))
+    ,
+    newText("code", "")
+        .settings.text( getVar("ID") ) 
+        .print()
+)
+.log("code", getVar("ID"))
 
 SendResults( "send" )
 newTrial( "final" ,
