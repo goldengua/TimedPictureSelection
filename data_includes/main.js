@@ -185,6 +185,10 @@ Template( variable =>
   .log( "Item"   , variable.Item   )
   .log( "Group"  , variable.Group  )
 )
+// Completion screen for the experiement
+var items = [
+["exit", "Form", {consentRequired: false, html: {include: "exit.html" }} ],
+];
 
 SendResults( "send" )
 newTrial( "final" ,
