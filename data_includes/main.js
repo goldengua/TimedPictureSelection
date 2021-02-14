@@ -6,7 +6,7 @@ AddHost("https://github.com/goldengua/TimedPictureSelection/tree/master/chunk_in
 
 // Start typing your code here
 
-Sequence( "welcome" , subsequence(randomize("experiment"), "break"), "exit","send" , "final" )
+Sequence( "welcome" , randomize("experiment"), "break", "exit","send" , "final" )
 newTrial( "welcome" ,
     defaultText
         .print()
